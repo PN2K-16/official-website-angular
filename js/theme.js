@@ -2571,4 +2571,4 @@ window.theme = {};
 }).apply(this, [window.theme, jQuery]);
 
 var MainTheme = window.theme;
-console.log(MainTheme);
+ 

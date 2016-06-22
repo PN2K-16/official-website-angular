@@ -18,7 +18,7 @@
         });
     }
 
-    angular.module('pn2k',['ui.router'])
+    angular.module('pn2k',['ui.router','ui.bootstrap','ngAnimate'])
         .config(config);
 
 })();

@@ -218,6 +218,8 @@
 
 		<script src="node_modules/angular/angular.js"></script>
 		<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+		<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+		<script src="node_modules/angular-animate/angular-animate.js"></script>
 
 
 		<script src="app/app.js"></script>
