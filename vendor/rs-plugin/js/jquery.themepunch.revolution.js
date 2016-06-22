@@ -5590,7 +5590,11 @@
 								container.trigger('revolution.slide.onstop');
 								opt.noloopanymore = 1;
 						} else {
+							if(bt.data('tween') === undefined){
+								//console.log("undef");
+							}else{
 							bt.data('tween').restart();
+							}
 						}
 
 						// SWAP THE SLIDES
