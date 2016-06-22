@@ -15,24 +15,34 @@
 
     var options = scope.$eval($(element).attr('data-options')); 
 
-    $(element).owlCarousel(options); 
-//items: 6, autoplay: true, autoplayTimeout: 3000
+    $(element).owlCarousel(options);  
    } 
 
   }; 
 
  })
-    .component('companyDetails',{
+  .component('companyDetails',{
 
-        templateUrl: 'pages/sub-items/companyDetails.html',
-        controller: function(){   
-        },
-        bindings: {
-        }  
-    })
+  templateUrl: 'pages/sub-items/companyDetails.html',
+  controller: function(){   
+  },
+  bindings: {
+  }  
+ })
+  .component('companyServices',{
+
+  templateUrl: 'pages/sub-items/companyServices.html',
+  controller: function(){   
+  },
+  bindings: {
+   "itemclass" :'@'
+  }  
+ })
   .controller('HomeController',HomeController)
-  .controller('AboutController',AboutController);
- 
+  .controller('AboutController',AboutController)
+  .controller('ContactController',ContactController)
+  .controller('PortfolioController',PortfolioController);
+
  function HomeController($timeout,$state,$rootScope,$scope){
 
 
@@ -93,7 +103,7 @@
    }).apply(this, [jQuery]);  
 
    // Carousel
- /*  (function($) {
+   /*  (function($) {
 
     'use strict';
 
@@ -107,11 +117,11 @@
        var pluginOptions = $this.data('plugin-options');
        if (pluginOptions)
         opts = pluginOptions;
-       
-       
+
+
        $this.themePluginCarousel(opts);
 
-     
+
 
       });
      });
@@ -520,7 +530,7 @@
 
    $scope.$digest();
 
- // Word Rotate
+   // Word Rotate
    (function($) {
 
     'use strict';
@@ -547,6 +557,155 @@
 
   });
 
+
+
+ }
+
+ function PortfolioController($timeout,$state,$rootScope,$scope,Projects,$uibModal){
+
+  var self = this;
+
+  self.items = Projects.data;
+
+  var opts = {"type":"inline", preloader: false};
+
+  $scope.loadProject = function(){
+
+
+  };
+ }
+
+ function ContactController($timeout,$state,$rootScope,$scope,Projects,$uibModal){
+
+  $timeout(function(){
+
+   $scope.$apply();
+
+
+   (function($) {
+
+    'use strict';
+
+
+
+    $('#contactForm:not([data-type=advanced])').validate({
+     submitHandler: function(form) {
+
+      var $form = $(form),
+          $messageSuccess = $('#contactSuccess'),
+          $messageError = $('#contactError'),
+          $submitButton = $(this.submitButton);
+
+      $submitButton.button('loading');
+
+      // Ajax Submit
+      $.ajax({
+       type: 'POST',
+       url: $form.attr('action'),
+       data: {
+        name: $form.find('#name').val(),
+        email: $form.find('#email').val(),
+        subject: $form.find('#subject').val(),
+        message: $form.find('#message').val()
+       },
+       dataType: 'json',
+       complete: function(data) {
+
+        if (typeof data.responseJSON === 'object') {
+         if (data.responseJSON.response == 'success') {
+
+          $messageSuccess.removeClass('hidden');
+          $messageError.addClass('hidden');
+
+          // Reset Form
+          $form.find('.form-control')
+           .val('')
+           .blur()
+           .parent()
+           .removeClass('has-success')
+           .removeClass('has-error')
+           .find('label.error')
+           .remove();
+
+          if (($messageSuccess.offset().top - 80) < $(window).scrollTop()) {
+           $('html, body').animate({
+            scrollTop: $messageSuccess.offset().top - 80
+           }, 300);
+          }
+
+          $submitButton.button('reset');
+
+          return;
+
+         }
+        }
+
+        $messageError.removeClass('hidden');
+        $messageSuccess.addClass('hidden');
+
+        if (($messageError.offset().top - 80) < $(window).scrollTop()) {
+         $('html, body').animate({
+          scrollTop: $messageError.offset().top - 80
+         }, 300);
+        }
+
+        $form.find('.has-success')
+         .removeClass('has-success');
+
+        $submitButton.button('reset');
+
+       }
+      });
+     }
+    });
+
+
+   }).apply(this, [jQuery]);
+
+   var mapMarkers = [{
+    address: "New York, NY 10017",
+    html: "<strong>New York Office</strong><br>New York, NY 10017",
+    icon: {
+     image: "img/pin.png",
+     iconsize: [26, 46],
+     iconanchor: [12, 46]
+    },
+    popup: true
+   }];
+
+   // Map Initial Location
+   var initLatitude = 40.75198;
+   var initLongitude = -73.96978;
+
+   // Map Extended Settings
+   var mapSettings = {
+    controls: {
+     draggable: true,
+     panControl: true,
+     zoomControl: true,
+     mapTypeControl: true,
+     scaleControl: true,
+     streetViewControl: true,
+     overviewMapControl: true
+    },
+    scrollwheel: false,
+    markers: mapMarkers,
+    latitude: initLatitude,
+    longitude: initLongitude,
+    zoom: 16
+   };
+
+   var map = $("#googlemaps").gMap(mapSettings);
+
+   // Map Center At
+   var mapCenterAt = function(options, e) {
+    e.preventDefault();
+    $("#googlemaps").gMap("centerAt", options);
+   }
+
+
+
+   });
 
 
  }

@@ -91,7 +91,7 @@
 								</li> 
 								
 								<li  ui-sref-active="active">
-									<a   ui-sref="contact-us" href="">
+									<a   ui-sref="contact" href="">
 										Contact Us 
 									</a>
 								</li> 
@@ -210,6 +210,8 @@
 		<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.js"></script>
 		<script src="vendor/circle-flip-slideshow/js/jquery.flipshow.js"></script>
 
+		
+		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
 		<!-- Theme Custom -->
 		<!--<script src="js/custom.js"></script>-->
@@ -223,7 +225,8 @@
 
 
 		<script src="app/app.js"></script>
-		<script src="app//controller.home.js"></script>
+		<script src="app/controller.home.js"></script>
+		<script src="app/constants.portfolio.js"></script>
 
 		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
 <script type="text/javascript">

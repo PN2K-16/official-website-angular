@@ -15,6 +15,16 @@
             templateUrl: "pages/about.html",
             controller: "AboutController as ac"
 
+        }).state('portfolio', {
+            url: "/portfolio",
+            templateUrl: "pages/portfolio.html",
+            controller: "PortfolioController as pc"
+
+        }).state('contact', {
+            url: "/contact-us",
+            templateUrl: "pages/contact.html",
+            controller: "ContactController as cc"
+
         });
     }
 
