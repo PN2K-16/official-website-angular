@@ -29,6 +29,14 @@
   bindings: {
   }  
  })
+   .component('contactInfo',{
+
+  templateUrl: 'pages/sub-items/contact-info.html',
+  controller: function(){   
+  },
+  bindings: {
+  }  
+ })
   .component('companyServices',{
 
   templateUrl: 'pages/sub-items/companyServices.html',
