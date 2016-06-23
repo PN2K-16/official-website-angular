@@ -29,7 +29,7 @@
   bindings: {
   }  
  })
-   .component('contactInfo',{
+  .component('contactInfo',{
 
   templateUrl: 'pages/sub-items/contact-info.html',
   controller: function(){   
@@ -49,7 +49,8 @@
   .controller('HomeController',HomeController)
   .controller('AboutController',AboutController)
   .controller('ContactController',ContactController)
-  .controller('PortfolioController',PortfolioController);
+  .controller('PortfolioController',PortfolioController)
+  .controller('PortfolioSingleController',PortfolioSingleController);
 
  function HomeController($timeout,$state,$rootScope,$scope){
 
@@ -569,7 +570,7 @@
 
  }
 
- function PortfolioController($timeout,$state,$rootScope,$scope,Projects,$uibModal){
+ function PortfolioController($timeout,$state,$rootScope,$scope,Projects,$uibModal,$firebaseObject){
 
   var self = this;
 
@@ -581,9 +582,11 @@
 
 
   };
+
+
  }
 
- function ContactController($timeout,$state,$rootScope,$scope,Projects,$uibModal){
+ function ContactController($timeout,$state,$rootScope,$scope,Projects,$uibModal,$firebaseObject){
 
   $timeout(function(){
 
@@ -670,7 +673,7 @@
 
    }).apply(this, [jQuery]);
 
-   var mapMarkers = [{
+   /*var mapMarkers = [{
     address: "New York, NY 10017",
     html: "<strong>New York Office</strong><br>New York, NY 10017",
     icon: {
@@ -679,11 +682,13 @@
      iconanchor: [12, 46]
     },
     popup: true
-   }];
-
+   }];*/
+   
+   var mapMarkers = [];
+ 
    // Map Initial Location
-   var initLatitude = 40.75198;
-   var initLongitude = -73.96978;
+   var initLatitude = 7.9217131;
+   var initLongitude = 79.7862614;
 
    // Map Extended Settings
    var mapSettings = {
@@ -700,7 +705,7 @@
     markers: mapMarkers,
     latitude: initLatitude,
     longitude: initLongitude,
-    zoom: 16
+    zoom: 14
    };
 
    var map = $("#googlemaps").gMap(mapSettings);
@@ -714,6 +719,57 @@
 
 
    });
+
+
+
+
+
+ }
+
+ function PortfolioSingleController($timeout,$state,$rootScope,$scope,Projects,$uibModal,$firebaseObject,$stateParams){
+
+  var self = this;
+
+
+
+
+  self.items = Projects.data;
+  self.item = Projects.data[$stateParams.id];
+
+  self.itemIndex = $stateParams.id;
+
+  self.arr1 = [];
+  self.arr2 = [];
+  self.arr3=  [];
+
+
+  function init(){
+   var items = [];
+
+   angular.copy(Projects.data[$stateParams.id].features,items);
+
+   
+   $timeout(function(){
+    while(items.length > 0){
+
+     self.arr1.push(items.pop());
+     self.arr2.push(items.pop());
+     self.arr3.push(items.pop());
+
+    } 
+
+   });
+
+  }
+
+  self.init = function(){
+   init();
+  };
+
+  init();
+
+
+
 
 
  }

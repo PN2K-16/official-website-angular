@@ -20,20 +20,37 @@
             templateUrl: "pages/portfolio.html",
             controller: "PortfolioController as pc"
 
+        }).state('portfolio-single', {
+            url: "/portfolio/:id",
+            templateUrl: "pages/portfolio-single.html",
+            controller: "PortfolioSingleController as psc"
+
         }).state('contact', {
             url: "/contact-us",
             templateUrl: "pages/contact.html",
             controller: "ContactController as cc"
 
         });
+        
+        
+
+        var config = {
+            apiKey: "AIzaSyC-GXQrw8HTfOv2waZpQDqTmQBJO-NQPKo",
+            authDomain: "pn2k-projects.firebaseapp.com",
+            databaseURL: "https://pn2k-projects.firebaseio.com",
+            storageBucket: "pn2k-projects.appspot.com",
+        };
+        
+        firebase.initializeApp(config);
     }
 
-    function run($rootScope){
+    function run($rootScope,$firebaseObject){
 
-        $rootScope.tabclick = function ($event) { $event.preventDefault(); }
+        
+
     }
 
-    angular.module('pn2k',['ui.router','ui.bootstrap','ngAnimate'])
+    angular.module('pn2k',['ui.router','ui.bootstrap','ngAnimate','firebase'])
         .config(config)
         .run(run);
 

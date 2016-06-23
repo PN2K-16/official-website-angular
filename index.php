@@ -30,6 +30,7 @@
 		<link rel="stylesheet" href="css/theme-blog.css">
 		<link rel="stylesheet" href="css/theme-shop.css">
 		<link rel="stylesheet" href="css/theme-animate.css">
+		<link rel="stylesheet" href="node_modules/angular-ui-router-anim-in-out/css/anim-in-out.css">
 
 		<!-- Current Page CSS -->
 		<link rel="stylesheet" href="vendor/rs-plugin/css/settings.css" media="screen">
@@ -101,7 +102,7 @@
 				</div>
 			</header>
 
-			<div ui-view ></div>
+			<div ui-view="" class="animated zoom" data-anim-speed="1000"></div>
 
 			<footer id="footer">
 				<div class="container">
@@ -109,54 +110,44 @@
 						<div class="footer-ribbon">
 							<span>Get in Touch</span>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-5">
 							<div class="newsletter">
 								<h4>Newsletter</h4>
 								<p>Keep up on our always evolving product features and technology. Enter your e-mail and subscribe to our newsletter.</p>
 
-								<div class="alert alert-success hidden" id="newsletterSuccess">
+							
+
+								 
+							
+							</div>
+						</div>
+					 <div class="col-md-4" ng-init="stat='false'">
+					 	<h4>&nbsp;</h4>
+						 	<div class="alert alert-success " ng-show="stat=='true'" >
 									<strong>Success!</strong> You've been added to our email list.
 								</div>
-
-								<div class="alert alert-danger hidden" id="newsletterError"></div>
-
-								<form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST">
+						 	<form id="newsletterForm" ng-hide="stat=='true'"  ng-submit="stat='true'">
 									<div class="input-group">
-										<input class="form-control" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
+										<input class="form-control" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="email" required>
 										<span class="input-group-btn">
 											<button class="btn btn-default" type="submit">Go!</button>
 										</span>
 									</div>
 								</form>
-							</div>
-						</div>
+						 
+					 </div>
 						<div class="col-md-3">
-							<h4>Latest Tweets</h4>
-							<div id="tweet" class="twitter" data-plugin-tweets data-plugin-options='{"username": "", "count": 2}'>
-								<p>Please wait...</p>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="contact-details">
+							<div class="contact-details pull-right">
 								<h4>Contact Us</h4>
 							
 								
 								<contact-info></contact-info>
 							</div>
 						</div>
-						<div class="col-md-2">
-							<h4>Follow Us</h4>
-							<div class="social-icons">
-								<ul class="social-icons">
-									<li class="facebook"><a href="http://www.facebook.com/" target="_blank" data-placement="bottom" data-tooltip title="Facebook">Facebook</a></li>
-									<li class="twitter"><a href="http://www.twitter.com/" target="_blank" data-placement="bottom" data-tooltip title="Twitter">Twitter</a></li>
-									<li class="linkedin"><a href="http://www.linkedin.com/" target="_blank" data-placement="bottom" data-tooltip title="Linkedin">Linkedin</a></li>
-								</ul>
-							</div>
-						</div>
+				 
 					</div>
 				</div>
-				<div class="footer-copyright">
+				<div class="footer-copyright" style="margin-top:0cm">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-1">
@@ -165,14 +156,16 @@
 								</a>
 							</div>
 							<div class="col-md-7">
-								<p>© Copyright 2015. All Rights Reserved.</p>
+								<p>© Copyright <?php echo date('Y'); ?>. All Rights Reserved.</p>
 							</div>
 							<div class="col-md-4">
 								<nav id="sub-menu">
 									<ul>
-										<li><a href="page-faq.html">FAQ's</a></li>
-										<li><a href="sitemap.html">Sitemap</a></li>
-										<li><a href="contact-us.html">Contact</a></li>
+										<li><a ui-sref="home">Home</a></li>
+										<li><a ui-sref="about">About</a></li>
+										<li><a ui-sref="portfolio">Portfolio</a></li>
+										<li><a ui-sref="contact">Contact</a></li>
+									 
 									</ul>
 								</nav>
 							</div>
@@ -214,12 +207,16 @@
 		<!-- Theme Custom -->
 		<!--<script src="js/custom.js"></script>-->
 
+		<script src="node_modules/vex/dist/vex.js"></script>
 
+		<script src="node_modules/firebase/firebase.js"></script>
 
 		<script src="node_modules/angular/angular.js"></script>
 		<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
 		<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
 		<script src="node_modules/angular-animate/angular-animate.js"></script>
+		<script src="node_modules/angularfire/dist/angularfire.js"></script>
+		<script src="node_modules/angular-ui-router-anim-in-out/anim-in-out.js"></script>
 
 
 		<script src="app/app.js"></script>

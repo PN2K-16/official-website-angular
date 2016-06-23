@@ -1,0 +1,20 @@
+{
+  "name": "pn2k",
+  "description": "PN2K official website",
+  "main": "index.js",
+  "authors": [
+    "Nilesh Jayanandana"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/PN2K-16/official-website-angular",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vex": "^2.3.4"
+  }
+}
