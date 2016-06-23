@@ -4,9 +4,9 @@
 
 		<!-- Basic -->
 		<meta charset="utf-8">
-		<title>PN2K</title>
+		<title>Reactive</title>
 		<meta name="keywords" content="PN2K Solutions" />
-		<meta name="description" content="Official website of PN2K Solutions">
+		<meta name="description" content="Official website of Reactive Solutions">
 		<meta name="author" content="Nilesh Jayanandana">
 
 		<!-- Mobile Metas -->
