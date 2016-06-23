@@ -28,7 +28,13 @@
         });
     }
 
+    function run($rootScope){
+
+        $rootScope.tabclick = function ($event) { $event.preventDefault(); }
+    }
+
     angular.module('pn2k',['ui.router','ui.bootstrap','ngAnimate'])
-        .config(config);
+        .config(config)
+        .run(run);
 
 })();

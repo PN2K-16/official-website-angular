@@ -24,15 +24,58 @@
 
 
 		<hr />
+<div>
+										<div class="portfolio-item img-thumbnail">
+											<a class="thumb-info lightbox" target="_self" href="#popupProject" data-plugin-options='{"type":"inline", preloader: false}' >
+												<img alt="" class="img-responsive" src="img/projects/dms.jpeg">
+												<span class="thumb-info-title">
+													<span class="thumb-info-inner">SEO</span>
+													<span class="thumb-info-type">Website</span>
+												</span>
+												<span class="thumb-info-action">
+													<span title="Universal" class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+												</span>
+											</a>
+										</div>
+										<div id="popupProject" class="popup-inline-content">
+											<h2>SEO</h2>
 
+											<div class="row">
+												<div class="col-md-6">
+													<img class="img-thumbnail img-responsive" alt="" src="img/projects/dms.jpeg">
+												</div>
+												<div class="col-md-6">
+
+													<h4>Project <strong>Description</strong></h4>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus nibh sed elit mattis adipiscing. Fusce in hendrerit purus. Suspendisse potenti. Proin quis eros odio, dapibus dictum mauris. Donec nisi libero, adipiscing id pretium eget, consectetur sit amet leo. Nam at eros quis mi egestas fringilla non nec purus.</p>
+
+													<a href="#" class="btn btn-primary">Live Preview</a> <span class="arrow hlb"></span>
+
+													<h4 class="push-top">Services</h4>
+
+													<ul class="list icons list-unstyled">
+														<li><i class="fa fa-check"></i> Design</li>
+														<li><i class="fa fa-check"></i> HTML/CSS</li>
+														<li><i class="fa fa-check"></i> Javascript</li>
+														<li><i class="fa fa-check"></i> Backend</li>
+													</ul>
+
+												</div>
+											</div>
+										</div>
+									</div>
+			
+	
 		<div class="row">
-
+		
 			<ul class="portfolio-list sort-destination"  >
 				<li class="col-md-3 col-sm-6 col-xs-12 isotope-item  " ng-repeat="x in pc.items">
 					<div class="portfolio-item img-thumbnail">
 
 
-						<a class="thumb-info lightbox" href="{{x.url}}"  target="_blank"  >
+						<!--<a class="thumb-info lightbox" href="{{x.url}}"  target="_blank"  >-->
+
+						<a class="thumb-info lightbox" href="#popupProject"   data-plugin-options='{"type":"inline", preloader: false}' ng-click="tabclick($event)">
 							<img alt="" class="img-responsive" ng-src="{{x.image}}" height="447">
 							<span class="thumb-info-title">
 								<span class="thumb-info-inner">{{x.title}}</span>
@@ -42,11 +85,42 @@
 								<span title="Universal" class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
 							</span>
 						</a>
+
+
+						<div id="popupProjejct" ng-if="$index == 0" class="popup-inline-content">
+							<h2>SEO</h2>
+
+							<div class="row">
+								<div class="col-md-6">
+									<!--<img class="img-thumbnail img-responsive" alt="" src="img/projects/project.jpg">-->
+								</div>
+								<div class="col-md-6">
+
+									<h4>Project <strong>Description</strong></h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus nibh sed elit mattis adipiscing. Fusce in hendrerit purus. Suspendisse potenti. Proin quis eros odio, dapibus dictum mauris. Donec nisi libero, adipiscing id pretium eget, consectetur sit amet leo. Nam at eros quis mi egestas fringilla non nec purus.</p>
+
+									<a href="#" class="btn btn-primary">Live Preview</a> <span class="arrow hlb"></span>
+
+									<h4 class="push-top">Services</h4>
+
+									<ul class="list icons list-unstyled">
+										<li><i class="fa fa-check"></i> Design</li>
+										<li><i class="fa fa-check"></i> HTML/CSS</li>
+										<li><i class="fa fa-check"></i> Javascript</li>
+										<li><i class="fa fa-check"></i> Backend</li>
+									</ul>
+
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</li> 
+
+
 			</ul>
 		</div>
- 
+
 
 	</div>
 
