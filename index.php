@@ -3,7 +3,7 @@
 	<head>
 
 		<!-- Basic -->
-		<meta charset="utf-8">
+		<!--<meta charset="utf-8">-->
 		<title>Reactive</title>
 		<meta name="keywords" content="PN2K Solutions" />
 		<meta name="description" content="Official website of Reactive Solutions">
