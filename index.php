@@ -61,8 +61,8 @@
 			<header id="header" class="flat-menu single-menu">
 				<div class="container">
 					<div class="logo">
-						<a href="index.html">
-							<img alt="Porto" width="111" height="54" data-sticky-width="82" data-sticky-height="40" src="img/logo.png">
+						<a  ui-sref="home">
+							<img alt="Porto" width="220" height="85" data-sticky-width="150" data-sticky-height="58" src="img/logo.png">
 						</a>
 					</div>
 					<button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
@@ -147,18 +147,18 @@
 				 
 					</div>
 				</div>
-				<div class="footer-copyright" style="margin-top:0cm">
+				<div class="footer-copyright" style="margin-top:0cm;padding-top:0cm">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-1">
-								<a href="index.html" class="logo">
-									<img alt="Porto Website Template" class="img-responsive" src="img/logo-footer.png">
+							<div class="col-md-2 " style="margin-bottom:0cm;padding-right:0cm">
+								<a  ui-sref="home" class="logo pull-down">
+									<img alt="Reactive Solutions" class="img-responsive" src="img/logo.png" >
 								</a>
 							</div>
-							<div class="col-md-7">
+							<div class="col-md-6 pull-down" style="margin-bottom:0cm">
 								<p>© Copyright <?php echo date('Y'); ?>. All Rights Reserved.</p>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 pull-down" style="margin-bottom:0cm">
 								<nav id="sub-menu">
 									<ul>
 										<li><a ui-sref="home">Home</a></li>

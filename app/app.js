@@ -31,8 +31,8 @@
             controller: "ContactController as cc"
 
         });
-        
-        
+
+
 
         var config = {
             apiKey: "AIzaSyC-GXQrw8HTfOv2waZpQDqTmQBJO-NQPKo",
@@ -40,13 +40,68 @@
             databaseURL: "https://pn2k-projects.firebaseio.com",
             storageBucket: "pn2k-projects.appspot.com",
         };
-        
+
         firebase.initializeApp(config);
     }
 
     function run($rootScope,$firebaseObject){
 
+        (function($) {
+
+            'use strict';
+
+            // Scroll to Top Button.
+            if (typeof theme.PluginScrollToTop !== 'undefined') {
+                theme.PluginScrollToTop.initialize();
+            }
+
+            // Parallax
+            if (typeof theme.PluginParallax !== 'undefined') {
+                theme.PluginParallax.initialize();
+            }
+
+            // Tooltips
+            if ($.isFunction($.fn['tooltip'])) {
+                $('[data-tooltip]').tooltip();
+            }
+
+        }).apply(this, [jQuery]);
+
+        (function($) {
+
+            'use strict';
+
+            // Sticky Menu
+            if (typeof theme.StickyMenu !== 'undefined') {
+                theme.StickyMenu.initialize();
+            }
+
+            // Nav Menu
+            if (typeof theme.Nav !== 'undefined') {
+                theme.Nav.initialize();
+            }
+
+            // Search
+            if (typeof theme.Search !== 'undefined') {
+                theme.Search.initialize();
+            }
+
+            // Newsletter
+            if (typeof theme.Newsletter !== 'undefined') {
+                theme.Newsletter.initialize();
+            }
+
+            // Account
+            if (typeof theme.Account !== 'undefined') {
+                theme.Account.initialize();
+            }
+
+        }).apply(this, [jQuery]);
         
+        $('.pull-down').each(function() {
+  var $this = $(this);
+  $this.css('margin-top', $this.parent().height() - $this.height())
+});
 
     }
 
