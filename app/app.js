@@ -3,7 +3,7 @@
     'use strict';
 
     function config($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise("/home");
+        $urlRouterProvider.otherwise("/404");
         $stateProvider
             .state('home', {
             url: "/home",
@@ -29,6 +29,11 @@
             url: "/contact-us",
             templateUrl: "pages/contact.html",
             controller: "ContactController as cc"
+
+        }).state('404', {
+            url: "/404",
+            templateUrl: "pages/404.html",
+            controller: ""
 
         });
 

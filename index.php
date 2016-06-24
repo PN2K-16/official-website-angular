@@ -22,7 +22,7 @@
 		<link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.css" media="screen">
 		<link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.theme.default.css" media="screen">
 		<!--<link rel="stylesheet" href="vendor/owlcarousel/owl.theme.default.min.css" media="screen">-->
-		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css" media="screen">
+		<!--<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css" media="screen">-->
 
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="css/theme.css">
@@ -30,7 +30,8 @@
 		<link rel="stylesheet" href="css/theme-blog.css">
 		<link rel="stylesheet" href="css/theme-shop.css">
 		<link rel="stylesheet" href="css/theme-animate.css">
-		<link rel="stylesheet" href="node_modules/angular-ui-router-anim-in-out/css/anim-in-out.css">
+		
+		<!--<link rel="stylesheet" href="node_modules/angular-ui-router-anim-in-out/css/anim-in-out.css">-->
 
 		<!-- Current Page CSS -->
 		<link rel="stylesheet" href="vendor/rs-plugin/css/settings.css" media="screen">
@@ -179,18 +180,20 @@
 		<script src="vendor/jquery/jquery.js"></script>
 		<script src="vendor/jquery.appear/jquery.appear.js"></script>
 		<script src="vendor/jquery.easing/jquery.easing.js"></script>
-		<script src="vendor/jquery-cookie/jquery-cookie.js"></script>
+		<!--<script src="vendor/jquery-cookie/jquery-cookie.js"></script>-->
 		<script src="vendor/bootstrap/bootstrap.js"></script>
+		
+		<script src="node_modules/angular/angular.js"></script>
 		<script src="vendor/common/common.js"></script>
 		<script src="vendor/jquery.validation/jquery.validation.js"></script>
-		<script src="vendor/jquery.stellar/jquery.stellar.js"></script>
-		<script src="vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>
+		<!--<script src="vendor/jquery.stellar/jquery.stellar.js"></script>-->
+		<!--<script src="vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>-->
 		<script src="vendor/jquery.gmap/jquery.gmap.js"></script>
 		<script src="vendor/isotope/jquery.isotope.js"></script>
 		<script src="node_modules/owl.carousel/dist/owl.carousel.js"></script>
 		<!--<script src="vendor/owlcarousel/owl.carousel.min.js"></script> -->
 		<script src="vendor/jflickrfeed/jflickrfeed.js"></script>
-		<script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
+		<!--<script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>-->
 		<script src="vendor/vide/vide.js"></script>
 
 		<!-- Theme Base, Components and Settings -->
@@ -202,7 +205,6 @@
 		<script src="vendor/circle-flip-slideshow/js/jquery.flipshow.js"></script>
 
 		
-		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
 		<!-- Theme Custom -->
 		<!--<script src="js/custom.js"></script>-->
@@ -211,18 +213,20 @@
 
 		<script src="node_modules/firebase/firebase.js"></script>
 
-		<script src="node_modules/angular/angular.js"></script>
 		<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
 		<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
 		<script src="node_modules/angular-animate/angular-animate.js"></script>
 		<script src="node_modules/angularfire/dist/angularfire.js"></script>
-		<script src="node_modules/angular-ui-router-anim-in-out/anim-in-out.js"></script>
+		<!--<script src="node_modules/angular-ui-router-anim-in-out/anim-in-out.js"></script>-->
 
 
 		<script src="app/app.js"></script>
 		<script src="app/controller.home.js"></script>
 		<script src="app/constants.portfolio.js"></script>
 
+		
+		
+		<script src="http://maps.google.com/maps/api/js?key=AIzaSyC-GXQrw8HTfOv2waZpQDqTmQBJO-NQPKo"></script>
 		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
 <script type="text/javascript">
 
