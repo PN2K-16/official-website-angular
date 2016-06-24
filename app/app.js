@@ -3,7 +3,7 @@
     'use strict';
 
     function config($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise("/404");
+        $urlRouterProvider.otherwise("/home");
         $stateProvider
             .state('home', {
             url: "/home",
@@ -102,13 +102,13 @@
             }
 
         }).apply(this, [jQuery]);
-        
-        $state.go('home');
-        
+
+        //$state.go('home');
+
         $('.pull-down').each(function() {
-  var $this = $(this);
-  $this.css('margin-top', $this.parent().height() - $this.height())
-});
+            var $this = $(this);
+            $this.css('margin-top', $this.parent().height() - $this.height())
+        });
 
     }
 
