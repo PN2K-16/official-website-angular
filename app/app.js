@@ -49,7 +49,7 @@
         firebase.initializeApp(config);
     }
 
-    function run($rootScope,$firebaseObject){
+    function run($rootScope,$firebaseObject,$state){
 
         (function($) {
 
@@ -102,6 +102,8 @@
             }
 
         }).apply(this, [jQuery]);
+        
+        $state.go('home');
         
         $('.pull-down').each(function() {
   var $this = $(this);
