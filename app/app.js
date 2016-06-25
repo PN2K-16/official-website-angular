@@ -3,10 +3,15 @@
     'use strict';
 
     function config($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise("/home");
+        $urlRouterProvider.otherwise("/404");
         $stateProvider
             .state('home', {
             url: "/home",
+            templateUrl: "pages/home.html",
+            controller: "HomeController as hc"
+
+        })  .state('home1', {
+            url: "/",
             templateUrl: "pages/home.html",
             controller: "HomeController as hc"
 
@@ -103,7 +108,7 @@
 
         }).apply(this, [jQuery]);
 
-      
+
 
         $('.pull-down').each(function() {
             var $this = $(this);
