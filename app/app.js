@@ -103,7 +103,7 @@
 
         }).apply(this, [jQuery]);
 
-        //$state.go('home');
+      
 
         $('.pull-down').each(function() {
             var $this = $(this);
