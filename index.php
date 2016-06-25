@@ -190,10 +190,8 @@
 		<!--<script src="vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>-->
 		<script src="vendor/jquery.gmap/jquery.gmap.js"></script>
 		<script src="vendor/isotope/jquery.isotope.js"></script>
-		<script src="node_modules/owl.carousel/dist/owl.carousel.js"></script>
-		<!--<script src="vendor/owlcarousel/owl.carousel.min.js"></script> -->
-		<script src="vendor/jflickrfeed/jflickrfeed.js"></script>
-		<!--<script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>-->
+		<script src="node_modules/owl.carousel/dist/owl.carousel.js"></script> 
+		<script src="vendor/jflickrfeed/jflickrfeed.js"></script> 
 		<script src="vendor/vide/vide.js"></script>
 
 		<!-- Theme Base, Components and Settings -->
@@ -206,8 +204,7 @@
 
 		
 
-		<!-- Theme Custom -->
-		<!--<script src="js/custom.js"></script>-->
+		<!-- Theme Custom --> 
 
 		<script src="node_modules/vex/dist/vex.js"></script>
 
@@ -217,12 +214,17 @@
 		<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
 		<script src="node_modules/angular-animate/angular-animate.js"></script>
 		<script src="node_modules/angularfire/dist/angularfire.js"></script>
-		<!--<script src="node_modules/angular-ui-router-anim-in-out/anim-in-out.js"></script>-->
-
+		 
 
 		<script src="app/app.js"></script>
 		<script src="app/controller.home.js"></script>
 		<script src="app/constants.portfolio.js"></script>
+		<script src="app/components.js"></script>
+		<script src="app/controller.about.js"></script>
+		<script src="app/controller.contact.js"></script>
+		<script src="app/controller.portfolio.js"></script>
+		<script src="app/directives.js"></script>
+ 
 
 		
 		

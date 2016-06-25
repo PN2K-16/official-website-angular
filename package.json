@@ -18,5 +18,10 @@
     "firebase": "^3.0.5",
     "owl.carousel": "^2.1.4",
     "vex": "0.0.4"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-watch" : "~0.5.3"
   }
 }
