@@ -34,7 +34,6 @@
             url: "/404",
             templateUrl: "pages/404.html",
             controller: ""
-
         });
 
 
@@ -49,7 +48,7 @@
         firebase.initializeApp(config);
     }
 
-    function run($rootScope,$firebaseObject,$state){
+    function run($rootScope,$firebaseObject,$state,$timeout){
 
         (function($) {
 
@@ -103,7 +102,16 @@
 
         }).apply(this, [jQuery]);
 
-      
+
+
+        $timeout(function(){
+            // $state.go('home');   
+            $rootScope.$on('$stateChangeError', function(event) {
+                $state.go('404');
+                console.log("error occured");
+            });
+
+        });
 
         $('.pull-down').each(function() {
             var $this = $(this);
