@@ -206,7 +206,7 @@
 </blockquote>
 
 <blockquote>
-  <p>Met 2 years ago and my life has never been the same. He got through second year thanks to me.
+  <p>You know your parents had a good new year when your birthday falls in September.
   Oh and Happy Birhtday.</p>
   <small> Dream Boy <cite title="Source Title">Nipuna H Herath</cite></small>
 </blockquote>
