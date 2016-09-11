@@ -176,6 +176,50 @@
 			</footer>
 		</div>
 
+
+		<div class="modal" id="announcement">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Happy Birthday Kushal!!!</h4>
+      </div>
+      <div class="modal-body">
+        <p>One of our most skilled developers is turning 23 today.</p>
+
+		<div class="row">
+		<div class="col-md-4"> 
+		
+		<img class="img-responsive img-thumbnail" style="margin-bottom:13%" src="img/kushal.jpg"/>
+	 
+				<img class="img-responsive img-thumbnail" src="img/kushal2.jpg"/>
+		</div>
+		<div class="col-md-8">
+		<blockquote>
+  <p>Happy Birthday to one of the craziest and bestest friend of mine although he has no spine.</p>
+  <small>Also without a spine <cite title="Source Title">Nilesh Jayanandana</cite></small>
+</blockquote>
+
+	<blockquote>
+  <p>He got through the exams thanks to me. And forgot to wish me on my birthday.</p>
+  <small>Lord <cite title="Source Title">Praveen Senadheera</cite></small>
+</blockquote>
+
+<blockquote>
+  <p>Met 2 years ago and my life has never been the same. He got through second year thanks to me.
+  Oh and Happy Birhtday.</p>
+  <small> Dream Boy <cite title="Source Title">Nipuna H Herath</cite></small>
+</blockquote>
+		</div>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 		<!-- Vendor -->
 		<script src="vendor/jquery/jquery.js"></script>
 		<script src="vendor/jquery.appear/jquery.appear.js"></script>
@@ -214,7 +258,7 @@
 		<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
 		<script src="node_modules/angular-animate/angular-animate.js"></script>
 		<script src="node_modules/angularfire/dist/angularfire.js"></script>
-		 
+		 <script src="vendor/uibootstrap/ui-bootstrap-custom-tpls-2.1.3.js"></script>
 
 		<script src="app/app.js"></script>
 		<script src="app/controller.home.js"></script>
@@ -244,6 +288,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 
 </script>
 -->
+
+ 
 
 	</body>
 </html>

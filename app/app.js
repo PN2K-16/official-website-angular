@@ -1,4 +1,4 @@
-(function(){
+(function () {
 
     'use strict';
 
@@ -6,35 +6,35 @@
         $urlRouterProvider.otherwise("/home");
         $stateProvider
             .state('home', {
-            url: "/home",
-            templateUrl: "pages/home.html",
-            controller: "HomeController as hc"
+                url: "/home",
+                templateUrl: "pages/home.html",
+                controller: "HomeController as hc"
 
-        }).state('about', {
-            url: "/about-us",
-            templateUrl: "pages/about.html",
-            controller: "AboutController as ac"
+            }).state('about', {
+                url: "/about-us",
+                templateUrl: "pages/about.html",
+                controller: "AboutController as ac"
 
-        }).state('portfolio', {
-            url: "/portfolio",
-            templateUrl: "pages/portfolio.html",
-            controller: "PortfolioController as pc"
+            }).state('portfolio', {
+                url: "/portfolio",
+                templateUrl: "pages/portfolio.html",
+                controller: "PortfolioController as pc"
 
-        }).state('portfolio-single', {
-            url: "/portfolio/:id",
-            templateUrl: "pages/portfolio-single.html",
-            controller: "PortfolioSingleController as psc"
+            }).state('portfolio-single', {
+                url: "/portfolio/:id",
+                templateUrl: "pages/portfolio-single.html",
+                controller: "PortfolioSingleController as psc"
 
-        }).state('contact', {
-            url: "/contact-us",
-            templateUrl: "pages/contact.html",
-            controller: "ContactController as cc"
+            }).state('contact', {
+                url: "/contact-us",
+                templateUrl: "pages/contact.html",
+                controller: "ContactController as cc"
 
-        }).state('404', {
-            url: "/404",
-            templateUrl: "pages/404.html",
-            controller: ""
-        });
+            }).state('404', {
+                url: "/404",
+                templateUrl: "pages/404.html",
+                controller: ""
+            });
 
 
 
@@ -48,9 +48,14 @@
         firebase.initializeApp(config);
     }
 
-    function run($rootScope,$firebaseObject,$state,$timeout){
+    function run($rootScope, $firebaseObject, $state, $timeout) {
 
-        (function($) {
+        $rootScope.$on('$stateChangeSuccess', function () {
+            $('#announcement').modal('show');
+            
+        });
+
+        (function ($) {
 
             'use strict';
 
@@ -71,7 +76,7 @@
 
         }).apply(this, [jQuery]);
 
-        (function($) {
+        (function ($) {
 
             'use strict';
 
@@ -104,23 +109,23 @@
 
 
 
-        $timeout(function(){
+        $timeout(function () {
             // $state.go('home');   
-            $rootScope.$on('$stateChangeError', function(event) {
+            $rootScope.$on('$stateChangeError', function (event) {
                 $state.go('404');
                 console.log("error occured");
             });
 
         });
 
-        $('.pull-down').each(function() {
+        $('.pull-down').each(function () {
             var $this = $(this);
             $this.css('margin-top', $this.parent().height() - $this.height())
         });
 
     }
 
-    angular.module('pn2k',['ui.router','ui.bootstrap','ngAnimate','firebase'])
+    angular.module('pn2k', ['ui.router', 'ui.bootstrap', 'ngAnimate', 'firebase'])
         .config(config)
         .run(run);
 
