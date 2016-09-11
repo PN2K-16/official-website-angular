@@ -50,10 +50,10 @@
 
     function run($rootScope, $firebaseObject, $state, $timeout) {
 
-        $rootScope.$on('$stateChangeSuccess', function () {
-            $('#announcement').modal('show');
-            
-        });
+        // $rootScope.$on('$stateChangeSuccess', function () {
+        //     $('#announcement').modal('show');
+
+        // });
 
         (function ($) {
 
